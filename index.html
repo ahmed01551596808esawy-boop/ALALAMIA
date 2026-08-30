@@ -248,10 +248,6 @@
         <div class="stat-l">فندق وشركة</div>
       </div>
       <div class="stat">
-        <div class="stat-n" data-t="99">0</div>
-        <div class="stat-l">زيارات الموقع</div>
-      </div>
-      <div class="stat">
         <div class="stat-n" data-t="13">0</div>
         <div class="stat-l">سنة خبرة</div>
       </div>
@@ -300,7 +296,7 @@
       const step = Math.ceil(target / 55);
       const t = setInterval(() => {
         n = Math.min(n + step, target);
-        el.textContent = n + (el.dataset.t == '100' || el.dataset.t == '99' ? '+' : '');
+        el.textContent = n + (el.dataset.t == '5' ? '+' : el.dataset.t == '100' ? '+' : '');
         if (n >= target) clearInterval(t);
       }, 22);
     }
